@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 6 failed tests</span>
+      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">10 methods, 6 failed,   4 passed</span>
+                    <span class="method-stats">7 methods, 2 failed,   5 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -103,32 +103,12 @@
                     <div class="method-list-content failed suite-E_CommerceSuite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-E_CommerceSuite" title="test.AddToCartTest" class="method navigator-link" hash-for-method="addMultipleProductsToCart_ShouldShowCorrectTotal">addMultipleProductsToCart_ShouldShowCorrectTotal</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-E_CommerceSuite" title="test.AddToCartTest" class="method navigator-link" hash-for-method="deleteFirstItemFromCart_ShouldUpdateCart">deleteFirstItemFromCart_ShouldUpdateCart</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="failed.png" width="3%"/>
                         <a href="#" panel-name="suite-E_CommerceSuite" title="test.AddToCartTest" class="method navigator-link" hash-for-method="deleteProductFromCart_ShouldUpdateCartAndTotal">deleteProductFromCart_ShouldUpdateCartAndTotal</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-E_CommerceSuite" title="test.PlaceOrderTest" class="method navigator-link" hash-for-method="placeOrder_WithEmptyForm_ShouldShowValidationError">placeOrder_WithEmptyForm_ShouldShowValidationError</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="failed.png" width="3%"/>
                         <a href="#" panel-name="suite-E_CommerceSuite" title="test.PlaceOrderTest" class="method navigator-link" hash-for-method="placeOrder_WithValidDetails_ShouldConfirm">placeOrder_WithValidDetails_ShouldConfirm</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-E_CommerceSuite" title="test.PlaceOrderTest" class="method navigator-link" hash-for-method="verifyOrderConfirmationPopup_ShouldContainValidData">verifyOrderConfirmationPopup_ShouldContainValidData</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-E_CommerceSuite -->
@@ -140,6 +120,11 @@
                       <a href="#" panel-name="suite-E_CommerceSuite" class="show-methods passed suite-E_CommerceSuite"> (show)</a> <!-- show-methods passed suite-E_CommerceSuite -->
                     </span>
                     <div class="method-list-content passed suite-E_CommerceSuite">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-E_CommerceSuite" title="test.AddToCartTest" class="method navigator-link" hash-for-method="addAndViewCart_ShouldContainItem">addAndViewCart_ShouldContainItem</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-E_CommerceSuite" title="test.LoginTest" class="method navigator-link" hash-for-method="login_InvalidPassword_ShouldShowAlert">login_InvalidPassword_ShouldShowAlert</a> <!-- method navigator-link -->
@@ -175,58 +160,25 @@
           <div class="suite-E_CommerceSuite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">test.PlaceOrderTest</span>
+              <span class="class-name">test.AddToCartTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="placeOrder_WithEmptyForm_ShouldShowValidationError">
-                  </a> <!-- placeOrder_WithEmptyForm_ShouldShowValidationError -->
-                  <span class="method-name">placeOrder_WithEmptyForm_ShouldShowValidationError</span>
-                  <div class="stack-trace">java.lang.AssertionError: Expected validation error message on empty form expected [true] but found [false]
-	at test.PlaceOrderTest.placeOrder_WithEmptyForm_ShouldShowValidationError(PlaceOrderTest.java:61)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 32 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="placeOrder_WithValidDetails_ShouldConfirm">
-                  </a> <!-- placeOrder_WithValidDetails_ShouldConfirm -->
-                  <span class="method-name">placeOrder_WithValidDetails_ShouldConfirm</span>
-                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.cssSelector: .sweet-alert &gt; div &gt; p (tried for 10 second(s) with 500 milliseconds interval)
-Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
+                  <a name="deleteProductFromCart_ShouldUpdateCartAndTotal">
+                  </a> <!-- deleteProductFromCart_ShouldUpdateCartAndTotal -->
+                  <span class="method-name">deleteProductFromCart_ShouldUpdateCartAndTotal</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.id: totalp (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.20.0&apos;, revision: &apos;866c76ca80&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.6&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.184, chrome: {chromedriverVersion: 138.0.7204.183 (e90faf484dd..., userDataDir: C:\Users\cdkar\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59730}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59730/devtoo..., se:cdpVersion: 138.0.7204.184, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: c806d282a59cb1db60fe82a86a55be35
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.184, chrome: {chromedriverVersion: 138.0.7204.183 (e90faf484dd..., userDataDir: C:\Users\cdkar\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60896}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60896/devtoo..., se:cdpVersion: 138.0.7204.184, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: faa6ee87bfdca95064e761acc630e1c1
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
 	at util.WaitUtil.waitForVisibility(WaitUtil.java:14)
-	at page.PlaceOrderPage.getConfirmationDetails(PlaceOrderPage.java:47)
-	at test.PlaceOrderTest.placeOrder_WithValidDetails_ShouldConfirm(PlaceOrderTest.java:40)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 29 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyOrderConfirmationPopup_ShouldContainValidData">
-                  </a> <!-- verifyOrderConfirmationPopup_ShouldContainValidData -->
-                  <span class="method-name">verifyOrderConfirmationPopup_ShouldContainValidData</span>
-                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.cssSelector: .sweet-alert &gt; div &gt; p (tried for 10 second(s) with 500 milliseconds interval)
-Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.6&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.184, chrome: {chromedriverVersion: 138.0.7204.183 (e90faf484dd..., userDataDir: C:\Users\cdkar\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59773}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59773/devtoo..., se:cdpVersion: 138.0.7204.184, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 65c0c345ca047b71c9beb3ba76db7136
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at util.WaitUtil.waitForVisibility(WaitUtil.java:14)
-	at page.PlaceOrderPage.getConfirmationDetails(PlaceOrderPage.java:47)
-	at test.PlaceOrderTest.verifyOrderConfirmationPopup_ShouldContainValidData(PlaceOrderTest.java:91)
+	at page.CartPage.getTotal(CartPage.java:31)
+	at test.AddToCartTest.deleteProductFromCart_ShouldUpdateCartAndTotal(AddToCartTest.java:36)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 ... Removed 29 stack frames
 </div> <!-- stack-trace -->
@@ -237,67 +189,25 @@ Session ID: 65c0c345ca047b71c9beb3ba76db7136
           <div class="suite-E_CommerceSuite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">test.AddToCartTest</span>
+              <span class="class-name">test.PlaceOrderTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="addMultipleProductsToCart_ShouldShowCorrectTotal">
-                  </a> <!-- addMultipleProductsToCart_ShouldShowCorrectTotal -->
-                  <span class="method-name">addMultipleProductsToCart_ShouldShowCorrectTotal</span>
-                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //a[text()=&apos;Sony vaio i5&apos;] (tried for 10 second(s) with 500 milliseconds interval)
-Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
+                  <a name="placeOrder_WithValidDetails_ShouldConfirm">
+                  </a> <!-- placeOrder_WithValidDetails_ShouldConfirm -->
+                  <span class="method-name">placeOrder_WithValidDetails_ShouldConfirm</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.cssSelector: .sweet-alert &gt; div &gt; p (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.20.0&apos;, revision: &apos;866c76ca80&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.6&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.184, chrome: {chromedriverVersion: 138.0.7204.183 (e90faf484dd..., userDataDir: C:\Users\cdkar\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59657}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59657/devtoo..., se:cdpVersion: 138.0.7204.184, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 3dafe12d1ba029b5718ba0346a9f0f6c
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.184, chrome: {chromedriverVersion: 138.0.7204.183 (e90faf484dd..., userDataDir: C:\Users\cdkar\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60929}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60929/devtoo..., se:cdpVersion: 138.0.7204.184, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4bee95f315228073eb996ecdb4501d40
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at util.WaitUtil.waitForClickable(WaitUtil.java:29)
-	at page.ProductPage.openProduct(ProductPage.java:21)
-	at test.AddToCartTest.addMultipleProductsToCart_ShouldShowCorrectTotal(AddToCartTest.java:30)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 29 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="deleteFirstItemFromCart_ShouldUpdateCart">
-                  </a> <!-- deleteFirstItemFromCart_ShouldUpdateCart -->
-                  <span class="method-name">deleteFirstItemFromCart_ShouldUpdateCart</span>
-                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //a[text()=&apos;Sony vaio i5&apos;] (tried for 10 second(s) with 500 milliseconds interval)
-Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.6&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.184, chrome: {chromedriverVersion: 138.0.7204.183 (e90faf484dd..., userDataDir: C:\Users\cdkar\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59705}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59705/devtoo..., se:cdpVersion: 138.0.7204.184, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: f4243cb9d5b4949a850b8578e7a7573f
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at util.WaitUtil.waitForClickable(WaitUtil.java:29)
-	at page.ProductPage.openProduct(ProductPage.java:21)
-	at test.AddToCartTest.deleteFirstItemFromCart_ShouldUpdateCart(AddToCartTest.java:78)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 29 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="deleteProductFromCart_ShouldUpdateCartAndTotal">
-                  </a> <!-- deleteProductFromCart_ShouldUpdateCartAndTotal -->
-                  <span class="method-name">deleteProductFromCart_ShouldUpdateCartAndTotal</span>
-                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of all elements located by By.cssSelector: #tbodyid &gt; tr &gt; td:nth-child(2) (tried for 10 second(s) with 500 milliseconds interval)
-Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.6&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.184, chrome: {chromedriverVersion: 138.0.7204.183 (e90faf484dd..., userDataDir: C:\Users\cdkar\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59681}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59681/devtoo..., se:cdpVersion: 138.0.7204.184, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 7e0f7b1bb2cbbd7d9ce971e75c0a3d14
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at util.WaitUtil.waitForVisibilityAll(WaitUtil.java:24)
-	at page.CartPage.getCartProductNames(CartPage.java:41)
-	at test.AddToCartTest.deleteProductFromCart_ShouldUpdateCartAndTotal(AddToCartTest.java:60)
+	at util.WaitUtil.waitForVisibility(WaitUtil.java:14)
+	at page.PlaceOrderPage.getConfirmationDetails(PlaceOrderPage.java:44)
+	at test.PlaceOrderTest.placeOrder_WithValidDetails_ShouldConfirm(PlaceOrderTest.java:41)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 ... Removed 29 stack frames
 </div> <!-- stack-trace -->
@@ -323,6 +233,21 @@ Session ID: 7e0f7b1bb2cbbd7d9ce971e75c0a3d14
                   <a name="login_ValidCredentials_ShouldShowUsername">
                   </a> <!-- login_ValidCredentials_ShouldShowUsername -->
                   <span class="method-name">login_ValidCredentials_ShouldShowUsername</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-E_CommerceSuite-class-passed -->
+          <div class="suite-E_CommerceSuite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">test.AddToCartTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="addAndViewCart_ShouldContainItem">
+                  </a> <!-- addAndViewCart_ShouldContainItem -->
+                  <span class="method-name">addAndViewCart_ShouldContainItem</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -363,20 +288,8 @@ Session ID: 7e0f7b1bb2cbbd7d9ce971e75c0a3d14
     &lt;classes&gt;
       &lt;class name=&quot;test.SignUpTest&quot;/&gt;
       &lt;class name=&quot;test.LoginTest&quot;/&gt;
-      &lt;class name=&quot;test.AddToCartTest&quot;&gt;
-        &lt;methods&gt;
-          &lt;include name=&quot;addMultipleProductsToCart_ShouldShowCorrectTotal&quot;/&gt;
-          &lt;include name=&quot;deleteProductFromCart_ShouldUpdateCartAndTotal&quot;/&gt;
-          &lt;include name=&quot;deleteFirstItemFromCart_ShouldUpdateCart&quot;/&gt;
-        &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- test.AddToCartTest --&gt;
-      &lt;class name=&quot;test.PlaceOrderTest&quot;&gt;
-        &lt;methods&gt;
-          &lt;include name=&quot;placeOrder_WithValidDetails_ShouldConfirm&quot;/&gt;
-          &lt;include name=&quot;placeOrder_WithEmptyForm_ShouldShowValidationError&quot;/&gt;
-          &lt;include name=&quot;verifyOrderConfirmationPopup_ShouldContainValidData&quot;/&gt;
-        &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- test.PlaceOrderTest --&gt;
+      &lt;class name=&quot;test.AddToCartTest&quot;/&gt;
+      &lt;class name=&quot;test.PlaceOrderTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- SequentialTests --&gt;
 &lt;/suite&gt; &lt;!-- E-CommerceSuite --&gt;
@@ -416,52 +329,40 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(10);
+data.addRows(7);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'deleteProductFromCart_ShouldUpdateCartAndTotal')
-data.setCell(0, 2, 'test.AddToCartTest')
-data.setCell(0, 3, 17992);
+data.setCell(0, 1, 'placeOrder_WithValidDetails_ShouldConfirm')
+data.setCell(0, 2, 'test.PlaceOrderTest')
+data.setCell(0, 3, 19606);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'verifyOrderConfirmationPopup_ShouldContainValidData')
-data.setCell(1, 2, 'test.PlaceOrderTest')
-data.setCell(1, 3, 16983);
+data.setCell(1, 1, 'addAndViewCart_ShouldContainItem')
+data.setCell(1, 2, 'test.AddToCartTest')
+data.setCell(1, 3, 11962);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'placeOrder_WithValidDetails_ShouldConfirm')
-data.setCell(2, 2, 'test.PlaceOrderTest')
-data.setCell(2, 3, 16747);
+data.setCell(2, 1, 'deleteProductFromCart_ShouldUpdateCartAndTotal')
+data.setCell(2, 2, 'test.AddToCartTest')
+data.setCell(2, 3, 11246);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'deleteFirstItemFromCart_ShouldUpdateCart')
-data.setCell(3, 2, 'test.AddToCartTest')
-data.setCell(3, 3, 14826);
+data.setCell(3, 1, 'login_ValidCredentials_ShouldShowUsername')
+data.setCell(3, 2, 'test.LoginTest')
+data.setCell(3, 3, 5467);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'addMultipleProductsToCart_ShouldShowCorrectTotal')
-data.setCell(4, 2, 'test.AddToCartTest')
-data.setCell(4, 3, 14678);
+data.setCell(4, 1, 'signUp_NewUser_ShouldShowSuccessAlert')
+data.setCell(4, 2, 'test.SignUpTest')
+data.setCell(4, 3, 2396);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'login_ValidCredentials_ShouldShowUsername')
-data.setCell(5, 2, 'test.LoginTest')
-data.setCell(5, 3, 3417);
+data.setCell(5, 1, 'signUp_ExistingUser_ShouldShowExistsAlert')
+data.setCell(5, 2, 'test.SignUpTest')
+data.setCell(5, 3, 1898);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'signUp_ExistingUser_ShouldShowExistsAlert')
-data.setCell(6, 2, 'test.SignUpTest')
-data.setCell(6, 3, 1860);
-data.setCell(7, 0, 7)
-data.setCell(7, 1, 'login_InvalidPassword_ShouldShowAlert')
-data.setCell(7, 2, 'test.LoginTest')
-data.setCell(7, 3, 1846);
-data.setCell(8, 0, 8)
-data.setCell(8, 1, 'signUp_NewUser_ShouldShowSuccessAlert')
-data.setCell(8, 2, 'test.SignUpTest')
-data.setCell(8, 3, 1840);
-data.setCell(9, 0, 9)
-data.setCell(9, 1, 'placeOrder_WithEmptyForm_ShouldShowValidationError')
-data.setCell(9, 2, 'test.PlaceOrderTest')
-data.setCell(9, 3, 1480);
+data.setCell(6, 1, 'login_InvalidPassword_ShouldShowAlert')
+data.setCell(6, 2, 'test.LoginTest')
+data.setCell(6, 3, 1871);
 window.suiteTableData['E_CommerceSuite']= { tableData: data, tableDiv: 'times-div-E_CommerceSuite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <span class="suite-total-time">Total running time: 54 seconds</span>
               <div id="times-div-E_CommerceSuite">
               </div> <!-- times-div-E_CommerceSuite -->
             </div> <!-- times-div -->
@@ -487,14 +388,14 @@ return data;
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
             <div class="ignored-class-div">
-              <span class="ignored-class-name">test.PlaceOrderTest</span>
+              <span class="ignored-class-name">test.AddToCartTest</span>
               <div class="ignored-methods-div">
                 <span class="ignored-method-name">flush</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
             <div class="ignored-class-div">
-              <span class="ignored-class-name">test.AddToCartTest</span>
+              <span class="ignored-class-name">test.PlaceOrderTest</span>
               <div class="ignored-methods-div">
                 <span class="ignored-method-name">flush</span>
                 <br/>
@@ -515,147 +416,103 @@ return data;
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">signUp_ExistingUser_ShouldShowExistsAlert</span>
-                <span class="method-start">3357 ms</span>
+                <span class="method-start">6137 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown([TestResult name=signUp_ExistingUser_ShouldShowExistsAlert status=SUCCESS method=SignUpTest.signUp_E...)</span>
-                <span class="method-start">5218 ms</span>
+                <span class="method-start">8039 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp(public void test.SignUpTest.signUp_NewUser_ShouldShowSuccessAlert())</span>
-                <span class="method-start">5365 ms</span>
+                <span class="method-start">8260 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">signUp_NewUser_ShouldShowSuccessAlert</span>
-                <span class="method-start">7830 ms</span>
+                <span class="method-start">13519 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown([TestResult name=signUp_NewUser_ShouldShowSuccessAlert status=SUCCESS method=SignUpTest.signUp_NewUs...)</span>
-                <span class="method-start">9671 ms</span>
+                <span class="method-start">15917 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">test.LoginTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setUp(public void test.LoginTest.login_InvalidPassword_ShouldShowAlert())</span>
-                <span class="method-start">9796 ms</span>
+                <span class="method-start">16058 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">login_InvalidPassword_ShouldShowAlert</span>
-                <span class="method-start">12807 ms</span>
+                <span class="method-start">19883 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown([TestResult name=login_InvalidPassword_ShouldShowAlert status=SUCCESS method=LoginTest.login_Invalid...)</span>
-                <span class="method-start">14653 ms</span>
+                <span class="method-start">21754 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp(public void test.LoginTest.login_ValidCredentials_ShouldShowUsername())</span>
-                <span class="method-start">14799 ms</span>
+                <span class="method-start">21935 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">login_ValidCredentials_ShouldShowUsername</span>
-                <span class="method-start">17023 ms</span>
+                <span class="method-start">25131 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown([TestResult name=login_ValidCredentials_ShouldShowUsername status=SUCCESS method=LoginTest.login_Val...)</span>
-                <span class="method-start">20440 ms</span>
+                <span class="method-start">30598 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">test.AddToCartTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
-                <span class="method-name">setUp(public void test.AddToCartTest.addMultipleProductsToCart_ShouldShowCorrectTotal())</span>
-                <span class="method-start">20571 ms</span>
+                <span class="method-name">setUp(public void test.AddToCartTest.addAndViewCart_ShouldContainItem() throws java.lang.InterruptedExcept...)</span>
+                <span class="method-start">30724 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">addMultipleProductsToCart_ShouldShowCorrectTotal</span>
-                <span class="method-start">23011 ms</span>
+                <span class="method-name">addAndViewCart_ShouldContainItem</span>
+                <span class="method-start">34694 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">tearDown([TestResult name=addMultipleProductsToCart_ShouldShowCorrectTotal status=FAILURE method=AddToCartTes...)</span>
-                <span class="method-start">37692 ms</span>
+                <span class="method-name">tearDown([TestResult name=addAndViewCart_ShouldContainItem status=SUCCESS method=AddToCartTest.addAndViewCart...)</span>
+                <span class="method-start">46657 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
-                <span class="method-name">setUp(public void test.AddToCartTest.deleteProductFromCart_ShouldUpdateCartAndTotal())</span>
-                <span class="method-start">38085 ms</span>
+                <span class="method-name">setUp(public void test.AddToCartTest.deleteProductFromCart_ShouldUpdateCartAndTotal() throws java.lang.Int...)</span>
+                <span class="method-start">46789 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">deleteProductFromCart_ShouldUpdateCartAndTotal</span>
-                <span class="method-start">40285 ms</span>
+                <span class="method-start">52568 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown([TestResult name=deleteProductFromCart_ShouldUpdateCartAndTotal status=FAILURE method=AddToCartTest....)</span>
-                <span class="method-start">58278 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">setUp(public void test.AddToCartTest.deleteFirstItemFromCart_ShouldUpdateCart())</span>
-                <span class="method-start">58680 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">deleteFirstItemFromCart_ShouldUpdateCart</span>
-                <span class="method-start">60737 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDown([TestResult name=deleteFirstItemFromCart_ShouldUpdateCart status=FAILURE method=AddToCartTest.delete...)</span>
-                <span class="method-start">75564 ms</span>
+                <span class="method-start">63819 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">test.PlaceOrderTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setUp(public void test.PlaceOrderTest.placeOrder_WithValidDetails_ShouldConfirm() throws java.lang.Interru...)</span>
-                <span class="method-start">75996 ms</span>
+                <span class="method-start">64234 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">placeOrder_WithValidDetails_ShouldConfirm</span>
-                <span class="method-start">77963 ms</span>
+                <span class="method-start">68350 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown([TestResult name=placeOrder_WithValidDetails_ShouldConfirm status=FAILURE method=PlaceOrderTest.plac...)</span>
-                <span class="method-start">94711 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">setUp(public void test.PlaceOrderTest.placeOrder_WithEmptyForm_ShouldShowValidationError() throws java.lan...)</span>
-                <span class="method-start">95005 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">placeOrder_WithEmptyForm_ShouldShowValidationError</span>
-                <span class="method-start">97319 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDown([TestResult name=placeOrder_WithEmptyForm_ShouldShowValidationError status=FAILURE method=PlaceOrder...)</span>
-                <span class="method-start">98800 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">setUp(public void test.PlaceOrderTest.verifyOrderConfirmationPopup_ShouldContainValidData() throws java.la...)</span>
-                <span class="method-start">99209 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">verifyOrderConfirmationPopup_ShouldContainValidData</span>
-                <span class="method-start">101126 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDown([TestResult name=verifyOrderConfirmationPopup_ShouldContainValidData status=FAILURE method=PlaceOrde...)</span>
-                <span class="method-start">118110 ms</span>
+                <span class="method-start">87957 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">test.SignUpTest</div> <!-- chronological-class-name -->
               <div class="configuration-suite after">
                 <span class="method-name">flush</span>
-                <span class="method-start">118429 ms</span>
+                <span class="method-start">88308 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
