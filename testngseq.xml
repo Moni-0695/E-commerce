@@ -1,0 +1,22 @@
+<suite name="E-CommerceSuite" verbose="1" parallel="false">
+  <test name="SequentialTests">
+    <classes>
+      <class name="test.SignUpTest"/>
+      <class name="test.LoginTest"/>
+      <class name="test.AddToCartTest">
+        <methods>
+          <include name="addMultipleProductsToCart_ShouldShowCorrectTotal"/>
+          <include name="deleteProductFromCart_ShouldUpdateCartAndTotal"/>
+          <include name="deleteFirstItemFromCart_ShouldUpdateCart"/>
+        </methods>
+      </class>
+      <class name="test.PlaceOrderTest">
+        <methods>
+          <include name="placeOrder_WithValidDetails_ShouldConfirm"/>
+          <include name="placeOrder_WithEmptyForm_ShouldShowValidationError"/>
+          <include name="verifyOrderConfirmationPopup_ShouldContainValidData"/>
+        </methods>
+      </class>
+    </classes>
+  </test>
+</suite>
