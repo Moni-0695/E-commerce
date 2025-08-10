@@ -3,16 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="test.AddToCartTest">
+      <class name="test.PlaceOrderTest">
         <methods>
-          <include name="deleteProductFromCart_ShouldUpdateCartAndTotal"/>
           <include name="setUp"/>
           <include name="tearDown"/>
-          <include name="deleteFirstItemFromCart_ShouldUpdateCart"/>
+          <include name="placeOrder_WithValidDetails_ShouldConfirm"/>
           <include name="flush"/>
-          <include name="addMultipleProductsToCart_ShouldShowCorrectTotal"/>
         </methods>
-      </class> <!-- test.AddToCartTest -->
+      </class> <!-- test.PlaceOrderTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

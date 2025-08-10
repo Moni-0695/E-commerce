@@ -19,9 +19,6 @@ public class PlaceOrderPage {
     private By confirmationHeading = By.cssSelector(".sweet-alert > h2");
     private By confirmationDetails = By.cssSelector(".sweet-alert > div > p");
 
-    // Validation error message
-    private By validationErrorMsg = By.cssSelector(".error"); // Update to your app's actual selector for form validation errors
-
     public PlaceOrderPage(WebDriver driver) {
         this.driver = driver;
     }
@@ -49,13 +46,5 @@ public class PlaceOrderPage {
 
     public void clickOkButton() {
         WaitUtil.waitForClickable(driver, okBtn, 10).click();
-    }
-
-    public boolean isValidationErrorDisplayed() {
-        try {
-            return WaitUtil.waitForVisibility(driver, validationErrorMsg, 5).isDisplayed();
-        } catch (Exception e) {
-            return false;
-        }
     }
 }

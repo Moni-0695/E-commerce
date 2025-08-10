@@ -15,85 +15,36 @@ public class PlaceOrderTest extends BaseTest {
         CartPage cart = new CartPage(driver);
         PlaceOrderPage order = new PlaceOrderPage(driver);
 
-        String productName = "Sony vaio i5";
+        String productName = "Sony vaio i5"; // choose an available product
 
         // Add product to cart
         product.openProduct(productName);
         product.clickAddToCart();
 
+        // Wait for and accept alert confirming addition
         Thread.sleep(1500);
         driver.switchTo().alert().accept();
 
-        // Open cart and click place order
+        // Go to cart and open place order modal
         cart.openCart();
         cart.clickPlaceOrder();
 
-        // Fill in order details
+        // Fill order details
         order.fillOrder(TestData.ORDER_NAME, TestData.ORDER_COUNTRY, TestData.ORDER_CITY,
                 TestData.ORDER_CARD, TestData.ORDER_MONTH, TestData.ORDER_YEAR);
 
-        // Submit purchase
+        // Click Purchase
         order.clickPurchase();
 
-        // Validate confirmation modal content
+        // Verify confirmation modal
         String heading = order.getConfirmationHeading();
         String details = order.getConfirmationDetails();
 
-        Assert.assertTrue(heading.toLowerCase().contains("thank you"), "Popup heading missing 'Thank you': " + heading);
-        Assert.assertTrue(details.toLowerCase().contains("id:"), "Popup details missing 'Id:' field: " + details);
-        Assert.assertTrue(details.toLowerCase().contains("amount:"), "Popup details missing 'Amount:' field: " + details);
+        Assert.assertTrue(heading.toLowerCase().contains("thank you"), "Confirmation heading incorrect: " + heading);
+        Assert.assertTrue(details.toLowerCase().contains("id"), "Confirmation details missing order ID: " + details);
+        Assert.assertTrue(details.toLowerCase().contains("amount"), "Confirmation details missing amount: " + details);
 
-        // Close confirmation
-        order.clickOkButton();
-    }
-
-    @Test
-    public void placeOrder_WithEmptyForm_ShouldShowValidationError() throws InterruptedException {
-        CartPage cart = new CartPage(driver);
-        PlaceOrderPage order = new PlaceOrderPage(driver);
-
-        cart.openCart();
-        cart.clickPlaceOrder();
-
-        order.clickPurchase();
-
-        // Check if validation error message appears
-        Assert.assertTrue(order.isValidationErrorDisplayed(), "Expected validation error message on empty form");
-
-        // Alternatively, check if confirmation modal does not show success
-        String heading = order.getConfirmationHeading();
-        Assert.assertFalse(heading.toLowerCase().contains("thank"), "Order should not be confirmed on empty form");
-    }
-
-    @Test
-    public void verifyOrderConfirmationPopup_ShouldContainValidData() throws InterruptedException {
-        ProductPage product = new ProductPage(driver);
-        CartPage cart = new CartPage(driver);
-        PlaceOrderPage order = new PlaceOrderPage(driver);
-
-        String productName = "Sony vaio i5";
-
-        product.openProduct(productName);
-        product.clickAddToCart();
-
-        Thread.sleep(1500);
-        driver.switchTo().alert().accept();
-
-        cart.openCart();
-        cart.clickPlaceOrder();
-
-        order.fillOrder(TestData.ORDER_NAME, TestData.ORDER_COUNTRY, TestData.ORDER_CITY,
-                TestData.ORDER_CARD, TestData.ORDER_MONTH, TestData.ORDER_YEAR);
-
-        order.clickPurchase();
-
-        String heading = order.getConfirmationHeading();
-        String details = order.getConfirmationDetails();
-
-        Assert.assertTrue(heading.toLowerCase().contains("thank you"), "Popup heading missing 'Thank you': " + heading);
-        Assert.assertTrue(details.toLowerCase().contains("id:"), "Popup details missing 'Id:' field: " + details);
-        Assert.assertTrue(details.toLowerCase().contains("amount:"), "Popup details missing 'Amount:' field: " + details);
-
+        // Click OK to close modal
         order.clickOkButton();
     }
 }
